@@ -1,0 +1,21 @@
+.about-header {
+    background: url(../../assets/header.png) no-repeat;
+}
+
+.page-header {
+    width: 100%;
+}
+
+.overlay-dark {
+    background-image: none;
+    background-color: #000;
+    z-index: 1;
+    visibility: visible;
+}
+.page-header .title-wrap {
+    padding: 1.125rem 1.5rem;
+    
+    transform: translateY(50%);
+    line-height: 1;
+    z-index: 2;
+}

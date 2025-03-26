@@ -1,0 +1,103 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px; 
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;  
+}
+
+h2 {
+  font-size: 2.9rem;
+  font-weight: 700;
+  margin: 0;  
+}
+
+h3{
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+h4{
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 0;
+}
+h5{
+  font-size: 1.38rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.rock-salt-regular {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.exo-2 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.gradient-bg {
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #ffab02 0%, #ffda00 51%, #ffab02 100%);
+
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  } 
+}
+.text-stroke {
+  -webkit-text-stroke: 1px #000000; /* Kenarlık kalınlığı ve rengi */
+  color: white ;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px white; /* Beyaz kenarlık */
+  color: transparent; /* Metin rengini şeffaf yaparak sadece kenarlığı gösterir */
+}
+.numbered-list {
+  list-style: none;
+  counter-reset: list-counter;
+  padding-left: 0;
+}
+
+.numbered-list > li {
+  counter-increment: list-counter;
+  
+}
+
+.numbered-list > li::before {
+  content: "7.1." counter(list-counter) " ";
+}
+.numbered-list > li::before {
+  content: "7.1." counter(list-counter) " ";
+}

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+
+#root {
+  --primary: #026191;
+  --secondary: #808080;
+  --tertiary: #ffb902;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+
+
