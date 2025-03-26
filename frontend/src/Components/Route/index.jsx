@@ -6,6 +6,7 @@ import PrivacyPolicy from '../../Pages/kvkk';
 import CookiePolicy from '../../Pages/cookiePolicy';
 import About from '../../Pages/about';
 import Contact from '../../Pages/contact';
+import Login from '../../Pages/Login';
 
 const RoutePage = () => {
   return (
@@ -17,6 +18,8 @@ const RoutePage = () => {
         <Route path="/cookiePolicy" element={<CookiePolicy/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+
 
 
 

@@ -6,7 +6,9 @@ const data = [
         district: "ALTINDAĞ",
         barrier: "",
         latitude:39.945395,
-        longitude:32.855629
+        longitude:32.855629,
+        username:"nergiz",
+        password:"nergiz123"
     },
     {
         id: 2,
@@ -15,7 +17,9 @@ const data = [
         district: "ÇANKAYA",
         barrier: "",
         latitude:39.924171,
-        longitude:32.851784
+        longitude:32.851784,
+        username:"kizilay",
+        password:"kizilay123"
     },
     {
         id: 3,
@@ -24,7 +28,9 @@ const data = [
         district: "ÇANKAYA",
         barrier: "",
         latitude:39.912936,
-        longitude:32.857656
+        longitude:32.857656,
+        username:"tuna",
+        password:"tuna123"
     },
 
     {
@@ -34,7 +40,9 @@ const data = [
         district: "BAHÇELİEVLER",
         barrier: "",
         latitude:39.920386, 
-        longitude:32.825899
+        longitude:32.825899,
+        username:"7kapı",
+        password:"7kapı123"
     },
     {
         id: 5,
@@ -44,6 +52,8 @@ const data = [
         barrier: "BARİYERSİZ",
         latitude:38.467338, 
         longitude:27.112841,
+        username:"engin",
+        password:"engin123"
     },
     {
         id: 6,
@@ -52,7 +62,9 @@ const data = [
         district: "KONAK",
         barrier: "BARİYERSİZ",
         latitude:38.437512,
-        longitude:27.145654
+        longitude:27.145654,
+        username:"reis",
+        password:"reis123"
     },
     {
         id: 7,
@@ -61,7 +73,9 @@ const data = [
         district: "KADIKÖY",
         barrier: "BARİYERSİZ",
         latitude:40.921745,
-        longitude:29.158602
+        longitude:29.158602,
+        username:"ritim",
+        password:"ritim123"
     },
     {
         id: 8,
@@ -70,7 +84,9 @@ const data = [
         district: "KADIKÖY",
         barrier: "BARİYERSİZ",
         latitude:40.9933116,
-        longitude:29.027044
+        longitude:29.027044,
+        username:"royal",
+        password:"royal123"
     },
     {
         id: 9,
@@ -79,7 +95,9 @@ const data = [
         district: "URLA",
         barrier: "BARİYERSİZ",
         latitude:38.323227, 
-        longitude:26.764582
+        longitude:26.764582,
+        username:"akgun",
+        password:"akgun123"
     },
     {
         id: 10,
@@ -88,7 +106,9 @@ const data = [
         district: "SİNCAN",
         barrier: "",
         latitude:39.957420,
-        longitude:32.550652
+        longitude:32.550652,
+        username:"kaplan",
+        password:"kaplan123"
     },
     {
         id: 11,
@@ -97,7 +117,9 @@ const data = [
         district: "EYÜP",
         barrier: "BARİYERSİZ",
         latitude:41.076675,
-        longitude:28.949484
+        longitude:28.949484,
+        username:"yaman",
+        password:"yaman123"
     },
     {
         id: 12,
@@ -106,7 +128,9 @@ const data = [
         district: "BEYLİKDÜZÜ",
         barrier: "BARİYERSİZ",
         latitude:41.015141,
-        longitude:28.639084
+        longitude:28.639084,
+        username:"camlik",
+        password:"camlik123"
     },
     {
         id: 13,
@@ -115,7 +139,9 @@ const data = [
         district: "TOPÇULAR",
         barrier: "BARİYERSİZ",
         latitude:41.043381, 
-        longitude:28.917635
+        longitude:28.917635,
+        username:"deniz",
+        password:"deniz123"
     },
     {
         id: 14,
@@ -124,7 +150,9 @@ const data = [
         district: "BAĞCILAR",
         barrier: "BARİYERSİZ",
         latitude:41.045711, 
-        longitude:28.848505
+        longitude:28.848505,
+        username:"rodin",
+        password:"rodin123"
     },
     {
         id: 15,
@@ -134,6 +162,8 @@ const data = [
         barrier: "",
         latitude: 39.944971,
         longitude: 32.853522,
+        username:"cetin",
+        password:"cetin123"
     },
     {
         id: 16,
@@ -143,6 +173,8 @@ const data = [
         barrier: "BARİYERSİZ",
         latitude:41.016137, 
         longitude:28.967157,
+        username:"sirin",
+        password:"sirin123"
     },
     {
         id: 17,
@@ -152,6 +184,8 @@ const data = [
         barrier: "BARİYERSİZ",
         latitude:41.018260,
         longitude:28.962198,
+        username:"suleymaniye",
+        password:"suleymaniye123"
     },
     {
         id: 18,
@@ -161,6 +195,8 @@ const data = [
         barrier: "BARİYERSİZ",
         latitude:38.393588, 
         longitude:27.036410,
+        username:"bey",
+        password:"bey123"
     },
     {
         id: 19,
@@ -169,7 +205,9 @@ const data = [
         district: "ÇANKAYA",
         barrier: "",
         latitude:39.923671,
-        longitude:32.851874
+        longitude:32.851874,
+        username:"anko",
+        password:"anko123"
     },
     {
         id: 20,
@@ -179,6 +217,8 @@ const data = [
         barrier: "BARİYERSİZ",
         latitude: 38.432186,
         longitude: 27.147522,
+        username:"avci",
+        password:"avci123"
     },
     {
         id: 21,
@@ -187,7 +227,9 @@ const data = [
         district: "ALTINDAĞ",
         barrier: "",
         latitude:39.969336,
-        longitude: 32.881530
+        longitude: 32.881530,
+        username:"23nisan",
+        password:"23nisan123"
     },
     {
         id: 22,
@@ -196,14 +238,10 @@ const data = [
         district: "BAKIRKÖY",
         barrier: "BARİYERSİZ",
         latitude:40.990991,
-        longitude:28.883723
+        longitude:28.883723,
+        username:"garaj",
+        password:"garaj123"
     },
-
-
-
-
-
-
 
 
 
