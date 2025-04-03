@@ -3,9 +3,7 @@ import MobileMenuButton from './mobileMenuButton';
 import NavLinks from './navLinks';
 import logo from '../../assets/logo.png';
 import { classNames } from '../../utils/classNames';
-import { useContext } from 'react';
-import { AuthContext } from '../../Context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+
 
 const navigation = [
   { name: 'ANASAYFA', href: '/home', current: false },
@@ -15,13 +13,8 @@ const navigation = [
 ];
 
 const Navbar = () => {
-  const { user, logout } = useContext(AuthContext);
-  const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout();
-    navigate('/login');
-  };
+ 
 
   return (
     <Disclosure as="nav">
@@ -40,22 +33,7 @@ const Navbar = () => {
           </div>
 
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            {/* Masaüstü için Giriş Yap veya Çıkış Yap Butonu */}
-            {user ? (
-              <button
-                onClick={handleLogout}
-                className="hidden md:block ml-4 text-lg font-bold text-gray-700 hover:text-blue-600"
-              >
-                Çıkış Yap
-              </button>
-            ) : (
-              <a
-                href="/login"
-                className="hidden md:block ml-4 text-lg font-bold text-gray-700 hover:text-blue-600"
-              >
-                Giriş Yap
-              </a>
-            )}
+           
           </div>
         </div>
       </div>
@@ -76,21 +54,7 @@ const Navbar = () => {
             </a>
           ))}
           {/* Mobil Menüde Giriş Yap veya Çıkış Yap Butonu */}
-          {user ? (
-            <button
-              onClick={handleLogout}
-              className="block text-lg font-bold text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md"
-            >
-              Çıkış Yap
-            </button>
-          ) : (
-            <a
-              href="/login"
-              className="block text-lg font-bold text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md"
-            >
-              Giriş Yap
-            </a>
-          )}
+          
         </div>
       </DisclosurePanel>
     </Disclosure>

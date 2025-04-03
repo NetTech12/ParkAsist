@@ -18,8 +18,15 @@ const Home = () => {
   return (
     <div>
       <Hero />
+
       <div className='container px-6 md:px-20 mx-auto'>
         <HeroSlider />
+        <div className='mx-auto px-2 pb-30  justify-between items-center -mt-12'>
+          <p className='text-center text-2xl font-semibold'>
+            Otoparkınızın yönetimi ve qr güncellemelerinize <a href="https://qr.parkasist.com/" className='text-blue-800'>QR ParkAsist</a> 'den ulaşabilirsiniz.
+
+          </p>
+        </div>
         <div className="mx-auto px-2 pb-40 grid grid-cols-1 lg:grid-cols-2 gap-10 justify-between items-center">
           <motion.div
             className='text-start h-full flex flex-col justify-between'
@@ -44,7 +51,7 @@ const Home = () => {
               </p>
             </div>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="flex justify-center items-start h-auto xl:h-full"
             variants={imageVariants}
             initial="hidden"
