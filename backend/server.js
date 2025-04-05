@@ -8,30 +8,26 @@ app.use(cors());
 app.use(express.json());
 
 
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
-});
-
-db.connect(err => {
-    if (err) {
-        console.error("Veritabanına bağlanırken hata:", err);
-    } else {
-        console.log("MySQL bağlantısı başarılı.");
+const knex = require('knex')({
+    client: 'mysql2',
+    connection: {
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME
     }
-});
-app.get("/carparks", (req, res) => {
-    db.query("SELECT * FROM carparks", (err, results) => {
-        if (err) {
-            console.error("Veri alınırken hata:", err);
-            return res.status(500).json({ success: false, message: "Veri alınırken hata oluştu." });
-        }
-        res.json(results);
-    });
-});
+  });
+  
 
+app.get("/carparks", async (req, res) => {
+    try {
+      const carparks = await knex("carparks").select("*");
+      res.json(carparks);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: "Hata oluştu" });
+    }
+  });
 app.get("/google-maps-key", (req, res) => {
     res.json({ apiKey: process.env.GOOGLE_MAPS_API_KEY });
 });

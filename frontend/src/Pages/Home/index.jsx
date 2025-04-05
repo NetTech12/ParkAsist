@@ -23,7 +23,7 @@ const Home = () => {
         <HeroSlider />
         <div className='mx-auto px-2 pb-30  justify-between items-center -mt-12'>
           <p className='text-center text-2xl font-semibold'>
-            Otoparkınızın yönetimi ve qr güncellemelerinize <a href="https://qr.parkasist.com/" className='text-blue-800'>QR ParkAsist</a> 'den ulaşabilirsiniz.
+            Otoparkınızın yönetimi ve qr güncellemelerinize <a href="https://qr.parkasist.com/Login" className='text-blue-800'>QR ParkAsist</a> 'den ulaşabilirsiniz.
 
           </p>
         </div>

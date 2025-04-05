@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useCarparkContext } from "../../Context/CarparkContext";
 import { useGoogleMaps } from "../../Context/GoogleMapsContext";
 
@@ -6,6 +6,7 @@ const MapComponent = () => {
   const mapRef = useRef(null);
   const { selectedCarpark } = useCarparkContext();
   const { apiKey, loading } = useGoogleMaps();
+
 
   useEffect(() => {
     if (loading || !apiKey || !selectedCarpark) return;

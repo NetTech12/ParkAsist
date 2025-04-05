@@ -39,7 +39,7 @@ const AllCarparkMap = ({ initialPosition }) => {
     }
   }, [apiKey, loading]);
 
-  // ✅ Filtre değişince marker’ları güncelle
+  //  Filtre değişince marker’ları güncelle
   useEffect(() => {
     if (scriptLoadedRef.current && mapInstanceRef.current) {
       updateMarkers();
