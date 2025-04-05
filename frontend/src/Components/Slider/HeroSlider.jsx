@@ -42,6 +42,10 @@ const HeroSlider = () => {
                 modules={[Navigation, Pagination, EffectCoverflow]}
                 spaceBetween={30}
                 initialSlide={1}
+                pagination={{
+                    dynamicBullets: true,
+                  }}
+
                 centeredSlides={true}
                 effect="coverflow"
                 coverflowEffect={{
@@ -63,11 +67,11 @@ const HeroSlider = () => {
                 {cards.map((card, index) => (
                     <SwiperSlide key={card.id} className="flex justify-center">
                         <div
-                            className={`px-10 py-10 h-60 md:h-80 xl:h-70 text-center text-white rounded-lg shadow-lg transition-all duration-300 ${index === activeIndex ? "bg-[var(--tertiary)]" : "bg-[var(--primary)] scale-105"
+                            className={`flex flex-col justify-between px-4 lg:px-8 py-10 h-60 md:h-70 xl:h-70 text-center text-white rounded-lg shadow-lg transition-all duration-300 ${index === activeIndex ? "bg-[var(--tertiary)]" : "bg-[var(--primary)] scale-105"
                                 }`}
                         >
-                            <div className="flex justify-center text-4xl mb-2">{card.icon}</div>
-                            <h2 className="text-2xl font-bold">{card.title}</h2>
+                            <div className="flex  justify-center text-4xl mb-2">{card.icon}</div>
+                            <h3 className=" !font-bold">{card.title}</h3>
                             <p className="mt-2">{card.description}</p>
                         </div>
                     </SwiperSlide>

@@ -11,9 +11,8 @@ const Carpark = () => {
   // Eğer bir otopark seçildiyse, onun konumunu kullan
   const initialPosition = selectedCarpark 
     ? [selectedCarpark.latitude, selectedCarpark.longitude] 
-    : [39.92077, 32.85411]; // Varsayılan Ankara konumu
+    : [ 41.0122, 28.976]; 
 
-  // Her filtreleme yapıldığında selectedCarpark'ı sıfırla
   useEffect(() => {
     setSelectedCarpark(null);
   }, [filteredCarparks, setSelectedCarpark]);

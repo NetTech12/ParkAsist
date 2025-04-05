@@ -19,7 +19,7 @@ const About = () => {
       </style>
   
 
-      <div className='container py-8 px-6 md:px-20 text-start text-lg mt-20 mx-auto opacity-70'>
+      <div className='container py-8 px-6 md:px-0 text-start text-lg mt-20 mx-auto opacity-70'>
         <section className='mb-16'>
           <h2 className='!font-[300] text-[var(--tertiary)]'>
             ParkAsist <span className='text-[var(--primary)]'>Sistemi Nedir?</span>

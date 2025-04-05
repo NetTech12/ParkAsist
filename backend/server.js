@@ -32,6 +32,9 @@ app.get("/carparks", (req, res) => {
     });
 });
 
+app.get("/google-maps-key", (req, res) => {
+    res.json({ apiKey: process.env.GOOGLE_MAPS_API_KEY });
+});
 
 
 // Sunucuyu başlat

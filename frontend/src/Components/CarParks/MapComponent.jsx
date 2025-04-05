@@ -1,43 +1,87 @@
-import { useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import React, { useEffect, useRef } from "react";
+import { useCarparkContext } from "../../Context/CarparkContext";
+import { useGoogleMaps } from "../../Context/GoogleMapsContext";
 
-const markerIconPng = new URL(
-  "leaflet/dist/images/marker-icon.png",
-  import.meta.url
-).href;
-
-const markerShadowPng = new URL(
-  "leaflet/dist/images/marker-shadow.png",
-  import.meta.url
-).href;
-
-// Özel Marker ikonu oluştur
-const customIcon = new L.Icon({
-  iconUrl: markerIconPng,
-  shadowUrl: markerShadowPng,
-  iconSize: [25, 41], // Genişlik ve yükseklik
-  iconAnchor: [12, 41], // Haritada ortalama noktası
-  popupAnchor: [1, -34], // Popup açıldığında konumu
-  shadowSize: [41, 41],
-});
-
-// Harita merkezini güncelleyen bileşen
-const MapUpdater = ({ lat, lng }) => {
-  const map = useMap();
+const MapComponent = () => {
+  const mapRef = useRef(null);
+  const { selectedCarpark } = useCarparkContext();
+  const { apiKey, loading } = useGoogleMaps();
 
   useEffect(() => {
-    if (lat && lng) {
-      map.setView([lat, lng], 16); // Yeni konuma odaklan
-    }
-  }, [lat, lng, map]);
+    if (loading || !apiKey || !selectedCarpark) return;
 
-  return null;
-};
+    const loadGoogleMapsScript = () => {
+      return new Promise((resolve, reject) => {
+        if (window.google && window.google.maps) {
+          resolve();
+          return;
+        }
 
-const MapComponent = ({ lat, lng, name }) => {
-  if (!lat || !lng) {
+        const existingScript = document.getElementById("google-maps-script");
+        if (existingScript) {
+          existingScript.addEventListener("load", resolve);
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.id = "google-maps-script";
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
+        script.async = true;
+        script.defer = true;
+        script.onload = resolve;
+        script.onerror = reject;
+
+        document.body.appendChild(script);
+      });
+    };
+
+    loadGoogleMapsScript()
+      .then(() => {
+        const lat = parseFloat(selectedCarpark.latitude);
+        const lng = parseFloat(selectedCarpark.longitude);
+        const name = selectedCarpark.name;
+
+        const hasValidCoords = !isNaN(lat) && !isNaN(lng) && (lat !== 0 && lng !== 0);
+        if (!hasValidCoords) return;
+
+        const map = new window.google.maps.Map(mapRef.current, {
+          center: { lat, lng },
+          zoom: 16,
+        });
+
+        const marker = new window.google.maps.Marker({
+          position: { lat, lng },
+          map,
+          title: name,
+        });
+
+        const infoWindow = new window.google.maps.InfoWindow({
+          content: `
+            <div style="padding:8px; font-size:14px; font-weight:bold;">${name}</div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" 
+              target="_blank" style="display:block; text-align:center; background:#007bff; color:white; padding:6px; margin-top:5px; border-radius:4px; text-decoration:none;">
+              Yol Tarifi Al
+            </a>
+          `
+        });
+
+        marker.addListener("click", () => {
+          infoWindow.open(map, marker);
+        });
+      })
+      .catch((err) => {
+        console.error("Google Maps yüklenirken hata oluştu:", err);
+      });
+  }, [apiKey, loading, selectedCarpark]);
+
+  if (
+    loading ||
+    !selectedCarpark ||
+    !selectedCarpark.latitude ||
+    !selectedCarpark.longitude ||
+    selectedCarpark.latitude === 0 ||
+    selectedCarpark.longitude === 0
+  ) {
     return (
       <div className="text-center h-25 bg-red-100 text-red-600 p-4 rounded-lg">
         <p>Harita bilgisi bulunamadı.</p>
@@ -45,22 +89,7 @@ const MapComponent = ({ lat, lng, name }) => {
     );
   }
 
-  return (
-    <MapContainer
-      center={[lat, lng]}
-      zoom={16}
-      style={{ height: "600px", width: "100%" }}
-    >
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
-      {/* Harita merkezini güncelleyen bileşen */}
-      <MapUpdater lat={lat} lng={lng} />
-
-      <Marker position={[lat, lng]} icon={customIcon}>
-        <Popup>{name}</Popup>
-      </Marker>
-    </MapContainer>
-  );
+  return <div ref={mapRef} style={{ height: "600px", width: "100%" }} />;
 };
 
 export default MapComponent;

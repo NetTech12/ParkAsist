@@ -13,7 +13,7 @@ const CarparkDetail = () => {
         {selectedCarpark.district}, {selectedCarpark.city}
       </p>
       
-     <MapComponent name={selectedCarpark.name} lat={selectedCarpark.latitude} lng={selectedCarpark.longitude} />
+     <MapComponent  />
     </div>
   );
 };
