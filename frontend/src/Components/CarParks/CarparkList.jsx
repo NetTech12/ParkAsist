@@ -10,11 +10,11 @@ const CarparkList = () => {
           {filteredCarparks.map((carpark) => (
             <li
               key={carpark.id}
-              className="p-8 bg-white shadow-md rounded-md flex flex-col justify-center items-center cursor-pointer"
+              className="p-8 bg-white shadow-md rounded-md flex flex-col justify-center items-center cursor-pointer dark:bg-gray-600 dark:text-white"
               onClick={() => setSelectedCarpark(carpark)}
             >
               <p className="text-lg font-semibold">{carpark.name}</p>
-              <p className="text-gray-500">
+              <p className="text-gray-500 dark:text-gray-400" >
                 {carpark.district}, {carpark.city}
               </p>
               {carpark.barrier && <p className="text-sm text-green-500">{carpark.barrier}</p>}

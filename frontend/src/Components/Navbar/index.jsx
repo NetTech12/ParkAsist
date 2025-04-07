@@ -18,17 +18,16 @@ const Navbar = () => {
 
   return (
     <Disclosure as="nav">
-      <div className="bg-white py-6 mx-auto shadow-sm px-2 sm:px-6 lg:px-8">
+      <div className="bg-white py-5 mx-auto shadow-sm px-2 sm:px-6 lg:px-8 dark:bg-gray-600 dark:text-white" >
         <div className="relative flex h-12 items-center justify-between">
           <MobileMenuButton />
 
-          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-between">
             <div className="flex shrink-0 items-center">
               <a href="/home">
                 <img alt="ParkAsist" src={logo} className="h-12 w-auto" />
               </a>
             </div>
-            {/* NavLinks bileşenine navigation dizisini prop olarak geçiriyoruz */}
             <NavLinks navigation={navigation} />
           </div>
 

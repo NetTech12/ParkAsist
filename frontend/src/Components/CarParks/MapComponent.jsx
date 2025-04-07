@@ -84,13 +84,13 @@ const MapComponent = () => {
     selectedCarpark.longitude === 0
   ) {
     return (
-      <div className="text-center h-25 bg-red-100 text-red-600 p-4 rounded-lg">
+      <div className="text-center h-25 bg-red-100 text-red-600 p-4 rounded-lg ">
         <p>Harita bilgisi bulunamadı.</p>
       </div>
     );
   }
 
-  return <div ref={mapRef} style={{ height: "600px", width: "100%" }} />;
+  return <div className="dark:bg-gray-600 dark:text-white" ref={mapRef} style={{ height: "600px", width: "100%" }} />;
 };
 
 export default MapComponent;

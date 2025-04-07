@@ -11,7 +11,7 @@ const CarparkFilter = () => {
   return (
     <div className="flex flex-col md:flex-row gap-4 mt-2 mb-4">
       <select
-        className="py-2 px-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
+        className="py-2 px-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 dark:bg-gray-600 dark:text-white"
         onChange={handleCityChange}
         value={selectedCity}
       >
@@ -27,7 +27,7 @@ const CarparkFilter = () => {
 
       {/* İlçe Seçimi */}
       <select
-        className="py-2 px-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 disabled:bg-gray-200"
+        className="py-2 px-4 border border-gray-300  rounded-md focus:ring-2 focus:ring-blue-400 disabled:bg-gray-200 dark:bg-gray-600 dark:text-white"
         onChange={(e) => setSelectedDistrict(e.target.value)}
         value={selectedDistrict}
         disabled={!selectedCity}
@@ -37,7 +37,7 @@ const CarparkFilter = () => {
         {[...new Set(carparks.filter((carpark) => carpark.city === selectedCity).map((carpark) => carpark.district))]
           .sort((a, b) => a.localeCompare(b, "tr"))
           .map((district) => (
-            <option key={district} value={district}>
+            <option  key={district} value={district}>
               {district}
             </option>
           ))}

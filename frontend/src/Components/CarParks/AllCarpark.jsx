@@ -140,7 +140,7 @@ const AllCarparkMap = ({ initialPosition }) => {
   }
 
   return (
-    <div className="mt-8 p-16 bg-gray-100 rounded-lg relative">
+    <div className="mt-8 p-16 bg-gray-100 rounded-lg relative dark:bg-gray-600 dark:text-white">
       <div ref={mapRef} style={{ height: "600px", width: "100%" }} />
     </div>
   );

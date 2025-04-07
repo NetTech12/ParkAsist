@@ -7,7 +7,7 @@ const CarparkDetail = () => {
   if (!selectedCarpark) return null;
 
   return (
-    <div className="mt-8 p-10 bg-gray-100 rounded-lg">
+    <div className="mt-8 p-10 bg-gray-100 rounded-lg dark:bg-gray-600 dark:text-white">
       <h2 className="text-xl font-semibold">{selectedCarpark.name}</h2>
       <p className="text-gray-600">
         {selectedCarpark.district}, {selectedCarpark.city}
