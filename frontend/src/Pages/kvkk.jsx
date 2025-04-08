@@ -5,7 +5,7 @@ import header from '../assets/header.png'
 
 const KVKK = () => {
   return (
-    <div className='text-lg text-start text-gray-800 '>
+    <div className='text-lg text-start text-gray-800 dark:text-gray-200'>
 
       <Header title=" KİŞİSEL VERİLERİN KORUNMASI VE İŞLENMESİ POLİTİKASI"
               bgImage={header}

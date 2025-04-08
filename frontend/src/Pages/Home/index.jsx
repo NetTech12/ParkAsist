@@ -34,11 +34,11 @@ const Home = () => {
             initial="hidden"
             animate="visible"
           >
-            <div>
-              <h1 className="!font-normal text-[var(--primary)] mb-3">
+            <div >
+              <h1 className="!font-normal text-[var(--primary)] mb-3 ">
                 Park Asistanınız Her Zaman Yanınızda
               </h1>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-700 dark:text-gray-300">
                 ParkAsist, kullanıcılarına kolay, hızlı ve avantajlı park çözümleri sunmak için geliştirilmiş bir dijital platformdur. Modern teknolojileri park etme deneyimiyle buluşturmayı hedefleyen ParkAsist, kullanıcılarına stressiz bir park deneyimi yaşatmayı amaçlar. Gelişmiş yazılım altyapısı ve kullanıcı dostu arayüzü sayesinde, park yeri bulma sürecini kolaylaştırır ve zaman tasarrufu sağlar.
               </p>
             </div>
@@ -46,7 +46,7 @@ const Home = () => {
               <h1 className="!font-normal text-[var(--primary)] mb-3">
                 Hayatınızı Kolaylaştıran Park Çözümü
               </h1>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-700 dark:text-gray-300">
                 ParkAsist ile şehrin yoğunluğunda kaybolmayın! Akıllı navigasyon sistemimiz sayesinde size en yakın ve en uygun park yerlerini anında keşfedin. Rezervasyon yaparak park yerinizi garanti altına alın ve gereksiz zaman kayıplarını ortadan kaldırın. İster mobil uygulamamızla ister web platformumuzla, dilediğiniz an kolayca hizmetlerimize erişin. Park etme deneyiminizi tamamen değiştiren ParkAsist, sizin için her ayrıntıyı düşünüyor. Güven, hız ve konfor artık bir arada!
               </p>
             </div>

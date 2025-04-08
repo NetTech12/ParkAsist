@@ -39,7 +39,7 @@ const Footer = () => {
                                 </a></li>
                             <li className="flex items-center transition-all duration-500 hover:text-yellow-500 hover:translate-x-2">
                                 <i className="fa-solid fa-chevron-right text-yellow-500 mr-2"></i>
-                                <a href='/cookiePolicy'>
+                                <a href='/cookie-policy'>
                                     Çerez Politikası
                                 </a>
                                 ı</li>

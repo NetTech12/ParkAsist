@@ -89,16 +89,38 @@ const CookiePolicy = () => {
           </p>
           <p>Tarayıcınızı; çerezleri tüm siteler veya belirli siteler için engelleyecek şekilde, çerez oluşturulduğunda uyarı verecek şekilde, üçüncü taraf çerezleri engelleyecek şekilde veya tüm çerezleri oturum çerezi gibi sayacak şekilde yapılandırabilirsiniz. Ek olarak, tarayıcınız üzerinden çerezleri silebilir veya tarayıcınızda saklanan çerezlerin listesini ve değerlerini görebilirsiniz. Tarayıcınızın çerez yönetimi işlevleri hakkında detaylı bilgi için lütfen aşağıdaki ilgili linke tıklayarak tarayıcınızın internet sitesinden bilgi alınız.</p>
           <ul className='list-none'>
-            <li>Çhttps://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=tr
+            <li>
+              <a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=tr">             
+                https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=tr
+              </a>
             </li>
-            <li>https://support.mozilla.org/tr/kb/cerezler-web-sitelerinin-bilgisayarinizda-depoladi
+            <li>
+              <a href="https://support.mozilla.org/tr/kb/cerezler-web-sitelerinin-bilgisayarinizda-depoladi">
+                https://support.mozilla.org/tr/kb/cerezler-web-sitelerinin-bilgisayarinizda-depoladi
+              </a>
             </li>
-            <li>https://support.apple.com/tr-tr/guide/safari/sfri11471/mac
+            <li>
+              <a href="https://support.apple.com/tr-tr/guide/safari/sfri11471/mac">
+                https://support.apple.com/tr-tr/guide/safari/sfri11471/mac
+              </a>
             </li>
-            <li>https://help.opera.com/en/latest/web-preferences/#cookies
+            <li>
+              <a href="https://help.opera.com/en/latest/web-preferences/#cookies">
+                https://help.opera.com/en/latest/web-preferences/#cookies
+              </a>
             </li>
-            <li>https://support.microsoft.com/tr-tr/help/17442/windows-internet-explorer-delete-manage-cookies</li>
-            <li>Çerezler ile ilgili daha detaylı bilgi için, https://www.aboutcookies.org veya https://www.youronlinechoices.eu/ adresini ziyaret edebilir ya da “Privacy Badger” uygulamasını kullanabilirsiniz (https://www.eff.org/tr/privacybadger).</li>
+            <li>
+              <a href="https://support.microsoft.com/tr-tr/help/17442/windows-internet-explorer-delete-manage-cookies">
+                https://support.microsoft.com/tr-tr/help/17442/windows-internet-explorer-delete-manage-cookies
+              </a>
+            </li>
+            <li>Çerezler ile ilgili daha detaylı bilgi için, 
+              <a href="https://www.aboutcookies.org">https://www.aboutcookies.org </a>
+              veya    
+              <a href="https://www.youronlinechoices.eu/"> https://www.youronlinechoices.eu/</a> 
+              adresini ziyaret edebilir ya da “Privacy Badger” uygulamasını kullanabilirsiniz 
+              <a href="https://www.eff.org/tr/privacybadger">(https://www.eff.org/tr/privacybadger)</a>.
+            </li>
           </ul>
         </section>
         <section className=' mb-16'  >

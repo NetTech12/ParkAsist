@@ -25,11 +25,11 @@ const Contact = () => {
 
         <div className='container px-6 md:px-20  text-lg  mx-auto opacity-80 border-1 py-18'>
 
-          <h2 className=" !font-normal text-[var(--primary)] text-center">
-            Bize <span className="text-gray-600">Ulaşın</span>
+          <h2 className=" !font-normal text-[var(--primary)] text-center ">
+            Bize <span className="text-gray-600 dark:text-gray-200">Ulaşın</span>
           </h2>
           <div className="w-16 h-1 bg-yellow-500 mx-auto my-3"></div>
-          <p className="text-center  text-gray-600">
+          <p className="text-center  text-gray-600 dark:text-gray-200">
             Herhangi bir sorunuz, öneriniz veya geri bildiriminiz mi var?
             Size yardımcı olmaktan memnuniyet duyarız!
           </p>
@@ -37,13 +37,13 @@ const Contact = () => {
           <div className="flex flex-col justify-center items-center mt-6 text-start md:text-center">
             <h4 className="text-yellow-500 font-semibold">ParkAsist</h4>
             <h3 className="text-2xl font-bold text-[var(--primary)]">Net&amp;Risk</h3>
-            <p className="text-gray-700 mt-2">
+            <p className="text-gray-700 mt-2 dark:text-gray-200">
               Adres: Business İstanbul A Blok Ofis 87-88 Kadıköy/İSTANBUL
             </p>
-            <a href="tel:+908503331792" className="text-gray-700 mt-2">
+            <a href="tel:+908503331792" className="text-gray-700 mt-2 dark:text-gray-200">
               +90 850 333 17 92
             </a>
-            <a href="mailto:info@netrisk.com.tr" className=" text-blue-700 mt-2">
+            <a href="mailto:info@netrisk.com.tr" className=" text-blue-700 mt-2 dark:text-gray-200">
               info@netrisk.com.tr
             </a>
           </div>
