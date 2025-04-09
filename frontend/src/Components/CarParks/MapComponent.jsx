@@ -58,7 +58,7 @@ const MapComponent = () => {
 
         const infoWindow = new window.google.maps.InfoWindow({
           content: `
-            <div style="padding:8px; font-size:14px; font-weight:bold;">${name}</div>
+            <div style="padding:8px; font-size:14px; font-weight:bold; color:black">${name}</div>
             <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" 
               target="_blank" style="display:block; text-align:center; background:#007bff; color:white; padding:6px; margin-top:5px; border-radius:4px; text-decoration:none;">
               Yol Tarifi Al

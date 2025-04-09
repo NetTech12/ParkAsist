@@ -112,7 +112,7 @@ const AllCarparkMap = ({ initialPosition }) => {
 
         marker.addListener("click", () => {
           infoWindowRef.current.setContent(
-            `<div style="padding:8px; font-size:14px; font-weight:bold;">
+            `<div style="padding:8px; font-size:14px; font-weight:bold; color:black">
               ${carpark.name}
             </div>
             <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" 
