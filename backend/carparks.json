@@ -4335,7 +4335,8 @@
     "district": "ALTINDAĞ",
     "barrier": "-",
     "latitude": "39.945395",
-    "longitude": "32.855629"
+    "longitude": "32.855629",
+    "special": "true"
   },
   {
     "id": "486",
@@ -4344,7 +4345,8 @@
     "district": "ÇANKAYA",
     "barrier": "-",
     "latitude": "39.924171",
-    "longitude": "32.851784"
+    "longitude": "32.851784",
+    "special": "true"
   },
   {
     "id": "487",
@@ -4353,7 +4355,8 @@
     "district": "ÇANKAYA",
     "barrier": "-",
     "latitude": "39.912936",
-    "longitude": "32.857656"
+    "longitude": "32.857656",
+    "special": "true"
   },
   {
     "id": "488",
@@ -4362,7 +4365,8 @@
     "district": "BAHÇELİEVLER",
     "barrier": "-",
     "latitude": "39.9203863702896",
-    "longitude": "32.825898192392415"
+    "longitude": "32.825898192392415",
+    "special": "true"
   },
   {
     "id": "489",
@@ -4371,7 +4375,8 @@
     "district": "BORNOVA",
     "barrier": "-",
     "latitude": "38.467338",
-    "longitude": "27.112841"
+    "longitude": "27.112841",
+    "special": "true"
   },
   {
     "id": "490",
@@ -4380,7 +4385,8 @@
     "district": "KONAK",
     "barrier": "-",
     "latitude": "38.437512",
-    "longitude": "27.145654"
+    "longitude": "27.145654",
+    "special": "true"
   },
   {
     "id": "491",
@@ -4389,7 +4395,8 @@
     "district": "KADIKÖY",
     "barrier": "-",
     "latitude": "40.92207114105821",
-    "longitude": "29.158240447365298"
+    "longitude": "29.158240447365298",
+    "special": "true"
   },
   {
     "id": "492",
@@ -4398,7 +4405,8 @@
     "district": "KADIKÖY",
     "barrier": "-",
     "latitude": "40.993293",
-    "longitude": "29.027729"
+    "longitude": "29.027729",
+    "special": "true"
   },
   {
     "id": "493",
@@ -4407,7 +4415,8 @@
     "district": "URLA",
     "barrier": "-",
     "latitude": "38.323227",
-    "longitude": "26.764582"
+    "longitude": "26.764582",
+    "special": "true"
   },
   {
     "id": "494",
@@ -4416,7 +4425,8 @@
     "district": "SİNCAN",
     "barrier": "-",
     "latitude": "39.95742",
-    "longitude": "32.550652"
+    "longitude": "32.550652",
+    "special": "true"
   },
   {
     "id": "495",
@@ -4425,7 +4435,8 @@
     "district": "EYÜP",
     "barrier": "-",
     "latitude": "41.076675",
-    "longitude": "28.949484"
+    "longitude": "28.949484",
+    "special": "true"
   },
   {
     "id": "496",
@@ -4434,7 +4445,8 @@
     "district": "BEYLİKDÜZÜ",
     "barrier": "-",
     "latitude": "41.015141",
-    "longitude": "28.639084"
+    "longitude": "28.639084",
+    "special": "true"
   },
   {
     "id": "497",
@@ -4443,7 +4455,8 @@
     "district": "TOPCULAR",
     "barrier": "-",
     "latitude": "41.043381",
-    "longitude": "28.917635"
+    "longitude": "28.917635",
+    "special": "true"
   },
   {
     "id": "498",
@@ -4452,7 +4465,8 @@
     "district": "BAĞCILAR",
     "barrier": "-",
     "latitude": "41.045711",
-    "longitude": "28.848505"
+    "longitude": "28.848505",
+    "special": "true"
   },
   {
     "id": "499",
@@ -4461,7 +4475,8 @@
     "district": "ÇANKAYA",
     "barrier": "-",
     "latitude": "39.944971",
-    "longitude": "32.853522"
+    "longitude": "32.853522",
+    "special": "true"
   },
   {
     "id": "500",
@@ -4470,7 +4485,8 @@
     "district": "FATİH",
     "barrier": "-",
     "latitude": "41.016137",
-    "longitude": "28.967157"
+    "longitude": "28.967157",
+    "special": "true"
   },
   {
     "id": "501",
@@ -4479,7 +4495,8 @@
     "district": "FATİH",
     "barrier": "-",
     "latitude": "41.01826",
-    "longitude": "28.962198"
+    "longitude": "28.962198",
+    "special": "true"
   },
   {
     "id": "502",
@@ -4488,7 +4505,8 @@
     "district": "BALÇOVA",
     "barrier": "-",
     "latitude": "38.393588",
-    "longitude": "27.03641"
+    "longitude": "27.03641",
+    "special": "true"
   },
   {
     "id": "503",
@@ -4497,7 +4515,8 @@
     "district": "ÇANKAYA",
     "barrier": "-",
     "latitude": "39.923671",
-    "longitude": "32.851874"
+    "longitude": "32.851874",
+    "special": "true"
   },
   {
     "id": "504",
@@ -4506,7 +4525,8 @@
     "district": "KONAK",
     "barrier": "-",
     "latitude": "38.432186",
-    "longitude": "27.147522"
+    "longitude": "27.147522",
+    "special": "true"
   },
   {
     "id": "505",
@@ -4515,7 +4535,8 @@
     "district": "ALTINDAĞ",
     "barrier": "-",
     "latitude": "39.969336",
-    "longitude": "32.88153"
+    "longitude": "32.88153",
+    "special": "true"
   },
   {
     "id": "506",
@@ -4524,6 +4545,7 @@
     "district": "BAKIRKÖY",
     "barrier": "-",
     "latitude": "40.990991",
-    "longitude": "28.883723"
+    "longitude": "28.883723",
+    "special": "true"
   }
 ]

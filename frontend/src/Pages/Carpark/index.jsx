@@ -22,7 +22,7 @@ const Carpark = () => {
       <h1 className="!font-normal text-[var(--primary)] mb-3 text-start">Size En Yakın Otoparkı Bulun..!</h1>
       <CarparkFilter />
       
-      {/* Eğer seçilmiş bir otopark yoksa harita bileşenini göster */}
+      
       {!selectedCarpark && filteredCarparks.length > 0 && <AllCarparkMap initialPosition={initialPosition} />}
 
       {selectedCarpark && <CarparkDetail />}

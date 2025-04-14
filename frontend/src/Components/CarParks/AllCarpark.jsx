@@ -67,27 +67,36 @@ const AllCarparkMap = ({ initialPosition }) => {
 
   const updateMarkers = () => {
     if (!mapInstanceRef.current) return;
-
+  
     if (window.allMarkers) {
       window.allMarkers.forEach(marker => marker.setMap(null));
     }
     window.allMarkers = [];
-
+  
     const bounds = new window.google.maps.LatLngBounds();
     const map = mapInstanceRef.current;
-
+  
     filteredCarparks.forEach((carpark) => {
       const lat = parseFloat(carpark.latitude);
       const lng = parseFloat(carpark.longitude);
       const hasValidCoords = !isNaN(lat) && !isNaN(lng);
-
+  
+      // Marker ikonu: özel olanlar kırmızı, diğerleri varsayılan
+      const markerIcon = {
+        url: carpark.special
+          ? "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+          : "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+          scaledSize: new window.google.maps.Size(45, 40), // 📏 
+      };
+      
       if (hasValidCoords && (lat === 0 || lng === 0)) {
         const marker = new window.google.maps.Marker({
-          position: { lat:41.0122, lng:28.976 }, 
+          position: { lat: 41.0122, lng: 28.976 },
           map,
           title: carpark.name + " (Adres Yok)",
+          icon: markerIcon,
         });
-
+  
         marker.addListener("click", () => {
           infoWindowRef.current.setContent(
             `<div style="padding:8px; font-size:14px; font-weight:bold;">
@@ -97,19 +106,20 @@ const AllCarparkMap = ({ initialPosition }) => {
           );
           infoWindowRef.current.open(map, marker);
         });
-
+  
         window.allMarkers.push(marker);
         return;
       }
-
+  
       if (hasValidCoords) {
         const position = { lat, lng };
         const marker = new window.google.maps.Marker({
           position,
           map,
           title: carpark.name,
+          icon: markerIcon,
         });
-
+  
         marker.addListener("click", () => {
           infoWindowRef.current.setContent(
             `<div style="padding:8px; font-size:14px; font-weight:bold; color:black">
@@ -123,26 +133,33 @@ const AllCarparkMap = ({ initialPosition }) => {
           );
           infoWindowRef.current.open(map, marker);
         });
-
+  
         bounds.extend(position);
         window.allMarkers.push(marker);
       }
     });
-
+  
     if (!bounds.isEmpty()) {
       map.fitBounds(bounds, { padding: 20 });
       map.setZoom(Math.min(map.getZoom(), 14));
     }
   };
+  
 
   if (filteredCarparks.length === 0) {
     return <p className="text-gray-600 mt-4">Lütfen şehir ve ilçe seçiniz veya geçerli park yeri verisi yok.</p>;
   }
 
   return (
+    <>
+     <div>
+      <p className=" text-gray-600 my-8 font-bold text-xl">Harita üzerinde ÖZEL otoparklar kırmızı , İSPARK otoparkları mavi olarak  görüntülenmektedir.</p>
+    </div>
     <div className="mt-8 p-16 bg-gray-100 rounded-lg relative dark:bg-gray-600 dark:text-white">
       <div ref={mapRef} style={{ height: "600px", width: "100%" }} />
     </div>
+    </>
+   
   );
 };
 

@@ -50,10 +50,18 @@ const MapComponent = () => {
           zoom: 16,
         });
 
+        const markerIcon = {
+          url: selectedCarpark.special
+            ? "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+            : "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+          scaledSize: new window.google.maps.Size(50, 40), // 📏 
+        };
+
         const marker = new window.google.maps.Marker({
           position: { lat, lng },
           map,
           title: name,
+          icon: markerIcon
         });
 
         const infoWindow = new window.google.maps.InfoWindow({
