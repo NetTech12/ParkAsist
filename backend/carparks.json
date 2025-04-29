@@ -4510,16 +4510,6 @@
   },
   {
     "id": "503",
-    "name": "ANKO OTOPARK",
-    "city": "ANKARA",
-    "district": "ÇANKAYA",
-    "barrier": "-",
-    "latitude": "39.923671",
-    "longitude": "32.851874",
-    "special": "true"
-  },
-  {
-    "id": "504",
     "name": "AVCI OTOPARK",
     "city": "İZMİR",
     "district": "KONAK",
@@ -4529,7 +4519,7 @@
     "special": "true"
   },
   {
-    "id": "505",
+    "id": "504",
     "name": "23 NİSAN KATLI OTOPARK",
     "city": "ANKARA",
     "district": "ALTINDAĞ",
@@ -4539,7 +4529,7 @@
     "special": "true"
   },
   {
-    "id": "506",
+    "id": "505",
     "name": "GARAJ İSTANBUL OTOPARK",
     "city": "İSTANBUL",
     "district": "BAKIRKÖY",
