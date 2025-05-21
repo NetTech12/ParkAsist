@@ -1,26 +1,36 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 import Header from '../Components/Header'
 import communication from '../assets/iletisim-banner2.jpg'
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaClock } from "react-icons/fa";
 
 const Contact = () => {
-  return (
+   const [isMobile, setIsMobile] = useState(false);
 
-    <div> <Header
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 441);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+  return (
+    <div>
+       <Header
       title="İletişim"
       bgImage={communication}
       style={{
-        height: "380px",
-
+        height: isMobile ? "300px" : "500px",
       }}
     />
       <style>
         {`
-      .page-header .title-wrap {
-        transform: translateY(400%) !important; /* Buradaki değeri değiştir */
-      }
-    `}
+            .page-header .title-wrap {
+                transform: translateY(${isMobile ? "310%" : "550%"}) !important; 
+              }
+            `}
       </style>
+  
       <div className=" ">
 
         <div className='container px-6 md:px-20  text-lg  mx-auto opacity-80 border-1 py-18'>

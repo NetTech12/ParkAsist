@@ -1,19 +1,30 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 import Header from '../Components/Header'
 import header from '../assets/hero.png'
 const About = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 441);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   return (
     <div>
-      <Header title="Hakkımızda"
-        bgImage={header}
-        style={{
-          height: "540px",
-        }}
-        />
+       <Header
+      title="Hakkımızda"
+      bgImage={header}
+      style={{
+        height: isMobile ? "300px" : "500px",
+      }}
+    />
       <style>
         {`
             .page-header .title-wrap {
-                transform: translateY(600%) !important; 
+                transform: translateY(${isMobile ? "320%" : "550%"}) !important; 
               }
             `}
       </style>
