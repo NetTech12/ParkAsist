@@ -1,0 +1,3 @@
+- Initial version of the application
+- Core modules implemented
+- Basic functionality completed and tested
