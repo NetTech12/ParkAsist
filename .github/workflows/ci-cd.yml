@@ -19,7 +19,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Bağımlılıkların Yüklenmesi
+      - name: Install backend dependencies
+        working-directory: ./backend
+        run: npm install
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
         run: npm install
 
       - name: Testlerin Çalıştırılması
