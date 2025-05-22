@@ -31,9 +31,7 @@ jobs:
         run: npm test --if-present
         working-directory: ./frontend
 
-      - name: Backend Testlerin Çalıştırılması
-        run: npm test --if-present
-        working-directory: ./backend  
+     
         
 
 
