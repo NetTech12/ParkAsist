@@ -27,8 +27,15 @@ jobs:
         working-directory: ./frontend
         run: npm install
 
-      - name: Testlerin Çalıştırılması
+      - name: Frontend Testlerin Çalıştırılması
         run: npm test --if-present
+        working-directory: ./frontend
+
+      - name: Backend Testlerin Çalıştırılması
+        run: npm test --if-present
+        working-directory: ./backend  
+        
+
 
       - name: Projenin Derlenmesi
         run: npm run build
