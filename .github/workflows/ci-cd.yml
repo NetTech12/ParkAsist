@@ -36,6 +36,7 @@ jobs:
 
 
       - name: Projenin Derlenmesi
+        working-directory: ./frontend
         run: npm run build
 
       
