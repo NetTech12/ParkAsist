@@ -1,0 +1,31 @@
+name: CI/CD Pipeline for Vite App
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodun Checkout Edilmesi
+        uses: actions/checkout@v4
+
+      - name: Node.js Kurulumu
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Bağımlılıkların Yüklenmesi
+        run: npm install
+
+      - name: Testlerin Çalıştırılması
+        run: npm test --if-present
+
+      - name: Projenin Derlenmesi
+        run: npm run build
+
+      
